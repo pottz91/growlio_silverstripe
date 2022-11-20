@@ -1,0 +1,7 @@
+---
+Name: cc
+---
+SilverStripe\View\SSViewer:
+  themes:
+    - "cc"
+    - '$default'
