@@ -4,8 +4,8 @@
   <div class="max-w-6xl">
 
     <div class=" grid grid-cols-12 gap-x-4 w-full">
-      <div class="col-span-12 flex flex-col bg-white shadow-lg py-3 px-4">
-        <h1 class="text-black font-medium ">$TextH1</h1>
+      <div class="col-span-12 flex flex-col bg-white py-3 px-4">
+        <h1 class="text-black font-bold text-xl ">$TextH1</h1>
         <h2 class="font-light mt-1">
           $TextH2
         </h2>
@@ -14,7 +14,7 @@
     </div>
 
     <% loop Hotels %>
-    <div class="gap-x-4 bg-white shadow-xl shadow-gray-300 w-full max-w-5xl flex
+    <div class="gap-x-4 bg-white shadow-xl shadow-gray-300 w-full max-w-4xl flex
       flex-col sm:flex-row gap-3 sm:items-center justify-between mt-4
       rounded-md">
       <div class="md:shrink-0">
