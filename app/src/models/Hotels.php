@@ -11,19 +11,21 @@ use SilverStripe\CMS\Model\SiteTreeLink;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\Forms\NumericField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 class Hotels extends DataObject
 {
 
   private static $db = [
     'HotelName' => 'Text',
-    'HotelBewertung' => 'Varchar',
-    'Benefit' => 'Text'
+    'HotelBewertung' => 'HTMLText',
+    'Benefit' => 'Text',
+    'Link' => 'Text',
+    'Ort' => 'Text'
   ];
 
   private static $has_one = [
     'HotelMe' => HotelMe::class,
-    'HotelButtonLink' => SiteTree::class
 
   ];
 
@@ -36,9 +38,10 @@ class Hotels extends DataObject
   {
     $fields = FieldList::create(
       TextField::create('HotelName'),
-      TextareaField::create('HotelBewertung'),
-      TextField::create('AngeboteIcon'),
-      TreeDropdownField::create('HotelButtonLinkID', 'HotelButtonLink', SiteTree::class),
+      HTMLEditorField::create('HotelBewertung'),
+      TextField::create('Benefit'),
+      TextField::create('Ort'),
+      TextField::create('Link')
 
     );
 

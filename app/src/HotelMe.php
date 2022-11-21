@@ -26,13 +26,8 @@ namespace {
 
         private static $db = [
             'AffiliateHomeText' => 'HTMLText',
-            'FAQHeadline1' => 'Text',
-            'FAQBeschreibung1' => 'Text',
-            'FAQHeadline2' => 'Text',
-            'FAQBeschreibung2' => 'Text',
-            'FAQHeadline3' => 'Text',
-            'FAQBeschreibung3' => 'Text',
-            'FAQAnzeigen' => 'Boolean',
+            'TextH1' => 'Text',
+            'TextH2' => 'Text',
             'HeaderHomeHeadline' => 'Text',
             'HeaderHomeBeschreibung' => 'Text',
 
@@ -57,14 +52,10 @@ namespace {
             $fields->addFieldToTab('Root.Startseite', HTMLEditorField::create('AffiliateHomeText'));
 
 
-            // FAQ BEREICH
-            $fields->addFieldToTab('Root.FAQ', CheckBoxField::create('FAQAnzeigen'));
-            $fields->addFieldToTab('Root.FAQ', TextField::create('FAQHeadline1'));
-            $fields->addFieldToTab('Root.FAQ', TextareaField::create('FAQBeschreibung1'));
-            $fields->addFieldToTab('Root.FAQ', TextField::create('FAQHeadline2'));
-            $fields->addFieldToTab('Root.FAQ', TextareaField::create('FAQBeschreibung2'));
-            $fields->addFieldToTab('Root.FAQ', TextField::create('FAQHeadline3'));
-            $fields->addFieldToTab('Root.FAQ', TextareaField::create('FAQBeschreibung3'));
+            // Hotel Bereich
+            $fields->addFieldToTab('Root.Main', TextField::create('TextH1'));
+            $fields->addFieldToTab('Root.Main', TextareaField::create('TextH2'));
+       
 
 
 
